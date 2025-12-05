@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autmeopypi"
+version = "1.0.0"
+description = "Automated Python Package Publishing Tool"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "mero", email = "mero@ps.dev"}
+]
+maintainers = [
+    {name = "mero", email = "mero@ps.dev"}
+]
+keywords = [
+    "pypi",
+    "upload",
+    "publish",
+    "package",
+    "build",
+    "wheel",
+    "sdist",
+    "automation",
+    "ci",
+    "cd",
+    "release",
+    "distribution"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Software Distribution",
+    "Topic :: Utilities"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "build>=0.7.0",
+    "twine>=4.0.0",
+    "wheel>=0.37.0",
+    "setuptools>=61.0",
+    "toml>=0.10.0",
+    "flask>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/6x-u/autopypi"
+Documentation = "https://github.com/6x-u/autopypi#readme"
+Repository = "https://github.com/6x-u/autopypi"
+Issues = "https://github.com/6x-u/autopypi/issues"
+Changelog = "https://github.com/6x-u/autopypi/releases"
+
+[project.scripts]
+autopypi = "autopypi.cli:main"
+
+[tool.setuptools]
+packages = ["autopypi"]
+
+[tool.setuptools.package-data]
+autopypi = ["*.py"]
+
+[tool.black]
+line-length = 100
+target-version = ["py37", "py38", "py39", "py310", "py311", "py312"]
+
