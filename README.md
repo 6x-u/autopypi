@@ -94,19 +94,19 @@
 ### Using pip (Recommended)
 
 ```bash
-pip install autopypi
+pip install autmeopypi
 ```
 
 ### Using pip3
 
 ```bash
-pip3 install autopypi
+pip3 install autmeopypi
 ```
 
 ### Upgrade to Latest Version
 
 ```bash
-pip install --upgrade autopypi
+pip install --upgrade autmeopypi
 ```
 
 ### Install from Source
@@ -122,18 +122,18 @@ pip install -e .
 ```bash
 pkg update && pkg upgrade
 pkg install python
-pip install autopypi
+pip install autmeopypi
 ```
 
 ### Verify Installation
 
 ```bash
-autopypi --version
+autmeopypi --version
 ```
 
 Expected output:
 ```
-AutoPyPI 1.0.0
+autmeopypi 1.0.0
 ```
 
 ---
@@ -149,7 +149,7 @@ cd /path/to/your/python/project
 ### Step 2: Build Your Package
 
 ```bash
-autopypi build
+autmeopypi build
 ```
 
 This creates:
@@ -159,7 +159,7 @@ This creates:
 ### Step 3: Check Your Package
 
 ```bash
-autopypi check
+autmeopypi check
 ```
 
 This verifies:
@@ -172,13 +172,13 @@ This verifies:
 ### Step 4: Upload to PyPI
 
 ```bash
-autopypi upload -t YOUR_PYPI_TOKEN
+autmeopypi upload -t YOUR_PYPI_TOKEN
 ```
 
 ### Step 5: Upload to TestPyPI (Optional)
 
 ```bash
-autopypi upload --test -t YOUR_TEST_PYPI_TOKEN
+autmeopypi upload --test -t YOUR_TEST_PYPI_TOKEN
 ```
 
 ---
@@ -194,25 +194,25 @@ The most powerful feature of AutoPyPI is one-command publishing. With a single c
 ### Using `start` Command
 
 ```bash
-autopypi start YOUR_PYPI_TOKEN
+autmeopypi start YOUR_PYPI_TOKEN
 ```
 
 ### Using `token` Command
 
 ```bash
-autopypi token YOUR_PYPI_TOKEN
+autmeopypi token YOUR_PYPI_TOKEN
 ```
 
 ### Publish to TestPyPI
 
 ```bash
-autopypi start YOUR_TEST_TOKEN --test
+autmeopypi start YOUR_TEST_TOKEN --test
 ```
 
 ### Publish from Specific Directory
 
 ```bash
-autopypi start YOUR_TOKEN --dir /path/to/packages
+autmeopypi start YOUR_TOKEN --dir /path/to/packages
 ```
 
 ### What Happens
@@ -243,7 +243,7 @@ autopypi start YOUR_TOKEN --dir /path/to/packages
 Build source distribution and wheel files.
 
 ```bash
-autopypi build [OPTIONS]
+autmeopypi build [OPTIONS]
 ```
 
 #### Options
@@ -258,19 +258,19 @@ autopypi build [OPTIONS]
 
 ```bash
 # Build both sdist and wheel
-autopypi build
+autmeopypi build
 
 # Build source distribution only
-autopypi build --sdist
+autmeopypi build --sdist
 
 # Build wheel only
-autopypi build --wheel
+autmeopypi build --wheel
 
 # Build without cleaning
-autopypi build --no-clean
+autmeopypi build --no-clean
 
 # Build specific project
-autopypi build -p /path/to/project
+autmeopypi build -p /path/to/project
 ```
 
 #### Output
@@ -303,12 +303,12 @@ mypackage-1.0.0-py3-none-any.whl  18.45 KB   def456...
 
 ---
 
-### `autopypi check`
+### `autmeopypi check`
 
 Verify package before uploading.
 
 ```bash
-autopypi check
+autmeopypi check
 ```
 
 #### What it Checks
@@ -342,12 +342,12 @@ autopypi check
 
 ---
 
-### `autopypi upload`
+### `autmeopypi upload`
 
 Upload package to PyPI or TestPyPI.
 
 ```bash
-autopypi upload [OPTIONS]
+autmeopypi upload [OPTIONS]
 ```
 
 #### Options
@@ -366,22 +366,22 @@ autopypi upload [OPTIONS]
 
 ```bash
 # Upload with token (recommended)
-autopypi upload -t pypi-xxxxxxxxxxxxx
+autmeopypi upload -t pypi-xxxxxxxxxxxxx
 
 # Upload to TestPyPI
-autopypi upload --test -t pypi-xxxxxxxxxxxxx
+autmeopypi upload --test -t pypi-xxxxxxxxxxxxx
 
 # Upload with username/password
-autopypi upload -u myusername --password mypassword
+autmeopypi upload -u myusername --password mypassword
 
 # Upload source distribution only
-autopypi upload --sdist-only -t TOKEN
+autmeopypi upload --sdist-only -t TOKEN
 
 # Upload wheel only
-autopypi upload --wheel-only -t TOKEN
+autmeopypi upload --wheel-only -t TOKEN
 
 # Skip pre-upload check
-autopypi upload --skip-check -t TOKEN
+autmeopypi upload --skip-check -t TOKEN
 ```
 
 #### Output
@@ -413,7 +413,7 @@ autopypi upload --skip-check -t TOKEN
 Complete release workflow: bump version, build, check, upload, and tag.
 
 ```bash
-autopypi release [OPTIONS]
+autmeopypi release [OPTIONS]
 ```
 
 #### Options
@@ -432,16 +432,16 @@ autopypi release [OPTIONS]
 
 ```bash
 # Full release with version bump and git tag
-autopypi release --bump minor --tag --push-tag -t TOKEN
+autmeopypi release --bump minor --tag --push-tag -t TOKEN
 
 # Release without version change
-autopypi release -t TOKEN
+autmeopypi release -t TOKEN
 
 # Release to TestPyPI
-autopypi release --test -t TOKEN
+autmeopypi release --test -t TOKEN
 
 # Patch release with tag
-autopypi release --bump patch --tag -t TOKEN
+autmeopypi release --bump patch --tag -t TOKEN
 ```
 
 #### Workflow
@@ -460,8 +460,8 @@ autopypi release --bump patch --tag -t TOKEN
 Set token and auto-publish all packages in directory.
 
 ```bash
-autopypi start TOKEN [OPTIONS]
-autopypi token TOKEN [OPTIONS]
+autmeopypi start TOKEN [OPTIONS]
+autmeopypi token TOKEN [OPTIONS]
 ```
 
 #### Options
@@ -475,23 +475,23 @@ autopypi token TOKEN [OPTIONS]
 
 ```bash
 # Publish all packages in current directory
-autopypi start pypi-xxxxxxxxxxxxx
+autmeopypi start pypi-xxxxxxxxxxxxx
 
 # Publish to TestPyPI
-autopypi token pypi-xxxxxxxxxxxxx --test
+autmeopypi token pypi-xxxxxxxxxxxxx --test
 
 # Publish packages in specific directory
-autopypi start pypi-xxxxxxxxxxxxx --dir /path/to/packages
+autmeopypi start pypi-xxxxxxxxxxxxx --dir /path/to/packages
 ```
 
 ---
 
-### `autopypi version`
+### `autmeopypi version`
 
 Manage package version.
 
 ```bash
-autopypi version [ACTION] [VALUE]
+autmeopypi version [ACTION] [VALUE]
 ```
 
 #### Actions
@@ -517,19 +517,19 @@ autopypi version [ACTION] [VALUE]
 
 ```bash
 # Show current version and options
-autopypi version
+autmeopypi version
 
 # Set specific version
-autopypi version set 2.0.0
+autmeopypi version set 2.0.0
 
 # Bump patch version
-autopypi version bump patch
+autmeopypi version bump patch
 
 # Bump minor version
-autopypi version bump minor
+autmeopypi version bump minor
 
 # Bump to alpha
-autopypi version bump alpha
+autmeopypi version bump alpha
 ```
 
 #### Output
@@ -553,7 +553,7 @@ autopypi version bump alpha
 Create and optionally push git tag.
 
 ```bash
-autopypi tag [OPTIONS]
+autmeopypi tag [OPTIONS]
 ```
 
 #### Options
@@ -567,26 +567,26 @@ autopypi tag [OPTIONS]
 
 ```bash
 # Create local tag
-autopypi tag
+autmeopypi tag
 
 # Create and push tag
-autopypi tag --push
+autmeopypi tag --push
 
 # Create tag with custom message
-autopypi tag -m "Release version 1.0.0"
+autmeopypi tag -m "Release version 1.0.0"
 
 # Create and push with message
-autopypi tag --push -m "Major release"
+autmeopypi tag --push -m "Major release"
 ```
 
 ---
 
-### `autopypi batch`
+### `autmeopypi batch`
 
 Perform batch operations on multiple packages.
 
 ```bash
-autopypi batch ACTION [DIRECTORY] [OPTIONS]
+autmeopypi batch ACTION [DIRECTORY] [OPTIONS]
 ```
 
 #### Actions
@@ -611,30 +611,30 @@ autopypi batch ACTION [DIRECTORY] [OPTIONS]
 
 ```bash
 # Build all packages in directory
-autopypi batch build ./packages
+autmeopypi batch build ./packages
 
 # Build with parallel processing
-autopypi batch build ./packages --parallel
+autmeopypi batch build ./packages --parallel
 
 # Upload all packages
-autopypi batch upload ./packages -t TOKEN
+autmeopypi batch upload ./packages -t TOKEN
 
 # Upload to TestPyPI
-autopypi batch upload ./packages --test -t TOKEN
+autmeopypi batch upload ./packages --test -t TOKEN
 
 # Full release of all packages
-autopypi batch release ./packages -t TOKEN
+autmeopypi batch release ./packages -t TOKEN
 
 # Check all packages
-autopypi batch check ./packages
+autmeopypi batch check ./packages
 
 # Clean all build directories
-autopypi batch clean ./packages
+autmeopypi batch clean ./packages
 ```
 
 ---
 
-### `autopypi ci`
+### `autmeopypi ci`
 
 Generate CI/CD configuration files.
 
@@ -654,15 +654,15 @@ autopypi ci [PLATFORM]
 
 ```bash
 # Generate both GitHub Actions and GitLab CI
-autopypi ci
+autmeopypi ci
 
 # Generate GitHub Actions only
-autopypi ci github
-autopypi ci gh
+autmeopypi ci github
+autmeopypi ci gh
 
 # Generate GitLab CI only
-autopypi ci gitlab
-autopypi ci gl
+autmeopypi ci gitlab
+autmeopypi ci gl
 ```
 
 #### Generated Files
@@ -696,22 +696,22 @@ publish:
   image: python:3.11
   stage: deploy
   script:
-    - pip install autopypi
-    - autopypi build
-    - autopypi check
-    - autopypi upload --token $PYPI_TOKEN
+    - pip install autmeopypi
+    - autmeopypi build
+    - autmeopypi check
+    - autmeopypi upload --token $PYPI_TOKEN
   only:
     - tags
 ```
 
 ---
 
-### `autopypi server`
+### `autmeopypi server`
 
 Start web interface.
 
 ```bash
-autopypi server [OPTIONS]
+autmeopypi server [OPTIONS]
 ```
 
 #### Options
@@ -726,26 +726,26 @@ autopypi server [OPTIONS]
 
 ```bash
 # Start with defaults
-autopypi server
+autmeopypi server
 
 # Custom port
-autopypi server --port 8080
+autmeopypi server --port 8080
 
 # Custom host and port
-autopypi server --host 127.0.0.1 --port 3000
+autmeopypi server --host 127.0.0.1 --port 3000
 
 # Debug mode
-autopypi server --debug
+autmeopypi server --debug
 ```
 
 ---
 
-### `autopypi clean`
+### `autmeopypi clean`
 
 Clean build directories.
 
 ```bash
-autopypi clean
+autmeopypi clean
 ```
 
 This removes:
@@ -755,12 +755,12 @@ This removes:
 
 ---
 
-### `autopypi info`
+### `autmeopypi info`
 
 Show package information.
 
 ```bash
-autopypi info
+autmeopypi info
 ```
 
 #### Output
@@ -786,12 +786,12 @@ mypackage-1.0.0-py3-none-any.whl  18.45 KB   def456...
 
 ---
 
-### `autopypi history`
+### `autmeopypi history`
 
 Show upload history.
 
 ```bash
-autopypi history [OPTIONS]
+autmeopypi history [OPTIONS]
 ```
 
 #### Options
@@ -804,22 +804,22 @@ autopypi history [OPTIONS]
 
 ```bash
 # Show last 10 uploads
-autopypi history
+autmeopypi history
 
 # Show last 5 uploads
-autopypi history --limit 5
+autmeopypi history --limit 5
 ```
 
 ---
 
 ## Python API
 
-AutoPyPI provides a complete Python API for programmatic access.
+autmeopypi provides a complete Python API for programmatic access.
 
 ### Importing
 
 ```python
-from autopypi import (
+from autmeopypi import (
     bld,      # Builder
     upl,      # Uploader
     chk,      # Checker
@@ -842,7 +842,7 @@ from autopypi import (
 Build source distributions and wheels.
 
 ```python
-from autopypi import bld
+from autmeopypi import bld
 
 # Create builder
 b = bld("/path/to/project")
@@ -886,7 +886,7 @@ b.show()
 Upload packages to PyPI or TestPyPI.
 
 ```python
-from autopypi import upl
+from autmeopypi import upl
 
 # Create uploader
 u = upl("/path/to/project")
@@ -929,7 +929,7 @@ u.show_history()
 Verify packages before upload.
 
 ```python
-from autopypi import chk
+from autmeopypi import chk
 
 # Create checker
 c = chk("/path/to/project")
@@ -966,7 +966,7 @@ c.lic()          # Check LICENSE exists
 Manage package versions.
 
 ```python
-from autopypi import ver
+from autmeopypi import ver
 
 # Create version manager
 v = ver("/path/to/project")
@@ -1036,7 +1036,7 @@ suggested = v.suggest()
 Git integration for tagging and releases.
 
 ```python
-from autopypi import git
+from autmeopypi import git
 
 # Create git manager
 g = git("/path/to/project")
@@ -1101,7 +1101,7 @@ gl_info = g.gl_info()
 Process multiple packages at once.
 
 ```python
-from autopypi import bat
+from autmeopypi import bat
 
 # Create batch processor
 b = bat("/path/to/packages")
@@ -1169,7 +1169,7 @@ b.clean_all()
 Generate CI/CD configuration files.
 
 ```python
-from autopypi import ci
+from autmeopypi import ci
 
 # Create CI manager
 c = ci("/path/to/project")
@@ -1217,7 +1217,7 @@ is_valid = c.valid_token("pypi-xxxxxxxxxxxxx")
 Start web interface for package management.
 
 ```python
-from autopypi import srv
+from autmeopypi import srv
 
 # Create server
 s = srv(host="0.0.0.0", port=5000, path="/path/to/project")
@@ -1244,7 +1244,7 @@ app = s.create()
 Manage project configuration.
 
 ```python
-from autopypi import Config
+from autmeopypi import Config
 
 # Load configuration
 cfg = Config("/path/to/project")
@@ -1294,7 +1294,7 @@ cfg.save()
 Beautiful terminal logging.
 
 ```python
-from autopypi import Logger
+from autmeopypi import Logger
 
 # Create logger
 log = Logger(verbose=True)
@@ -1363,7 +1363,7 @@ removed = log.clean(keep=10)
 Terminal colors and styling.
 
 ```python
-from autopypi import c
+from autmeopypi import c
 
 # Initialize colors (required on Windows)
 c.init()
@@ -1452,7 +1452,7 @@ print(f"{c.u}Underline{c.r}")
 Utility functions.
 
 ```python
-from autopypi import Utils
+from autmeopypi import Utils
 
 # File operations
 Utils.ensure_dir("/path/to/dir")
@@ -1497,18 +1497,18 @@ Utils.ensure_dependencies()
 
 ## Web Interface
 
-AutoPyPI includes a beautiful web interface for managing packages.
+autmeopypi includes a beautiful web interface for managing packages.
 
 ### Starting the Server
 
 ```bash
-autopypi server
+autmeopypi server
 ```
 
 Or with Python:
 
 ```python
-from autopypi import srv
+from autmeopypi import srv
 s = srv(port=5000)
 s.run()
 ```
@@ -1558,10 +1558,10 @@ http://localhost:5000
 
 ### GitHub Actions
 
-AutoPyPI can generate a complete GitHub Actions workflow.
+autmeopypi can generate a complete GitHub Actions workflow.
 
 ```bash
-autopypi ci gh
+autmeopypi ci gh
 ```
 
 This creates `.github/workflows/publish.yml`:
@@ -1628,7 +1628,7 @@ Add these secrets to your GitHub repository:
 ### GitLab CI
 
 ```bash
-autopypi ci gl
+autmeopypi ci gl
 ```
 
 This creates `.gitlab-ci.yml`:
@@ -1768,7 +1768,7 @@ PyPI tokens are the recommended way to authenticate.
 
 ```bash
 # Command line
-autopypi upload -t pypi-xxxxxxxxxxxxx
+autmeopypi upload -t pypi-xxxxxxxxxxxxx
 
 # Environment variable
 export PYPI_TOKEN=pypi-xxxxxxxxxxxxx
@@ -1778,7 +1778,7 @@ autopypi upload
 ### Username/Password Authentication
 
 ```bash
-autopypi upload -u myusername --password mypassword
+autmeopypi upload -u myusername --password mypassword
 ```
 
 ### Using ~/.pypirc
@@ -1804,7 +1804,7 @@ password = pypi-xxxxxxxxxxxxx
 Then simply run:
 
 ```bash
-autopypi upload
+autmeopypi upload
 ```
 
 ---
@@ -1834,26 +1834,26 @@ packages/
 ### Build All
 
 ```bash
-autopypi batch build ./packages
+autmeopypi batch build ./packages
 ```
 
 ### Upload All
 
 ```bash
-autopypi batch upload ./packages -t TOKEN
+autmeopypi batch upload ./packages -t TOKEN
 ```
 
 ### Release All
 
 ```bash
-autopypi batch release ./packages -t TOKEN
+autmeopypi batch release ./packages -t TOKEN
 ```
 
 ### Parallel Processing
 
 ```bash
-autopypi batch build ./packages --parallel
-autopypi batch upload ./packages -t TOKEN --parallel
+autmeopypi batch build ./packages --parallel
+autmeopypi batch upload ./packages -t TOKEN --parallel
 ```
 
 ---
@@ -1862,7 +1862,7 @@ autopypi batch upload ./packages -t TOKEN --parallel
 
 ### Semantic Versioning
 
-AutoPyPI follows semantic versioning (SemVer):
+autmeopypi follows semantic versioning (SemVer):
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]
@@ -1881,31 +1881,31 @@ Examples:
 
 ```bash
 # View current version
-autopypi version
+autmeopypi version
 
 # Bump patch (1.0.0 -> 1.0.1)
-autopypi version bump patch
+autmeopypi version bump patch
 
 # Bump minor (1.0.0 -> 1.1.0)
-autopypi version bump minor
+autmeopypi version bump minor
 
 # Bump major (1.0.0 -> 2.0.0)
-autopypi version bump major
+autmeopypi version bump major
 
 # Create alpha (1.0.0 -> 1.0.1a1)
-autopypi version bump alpha
+autmeopypi version bump alpha
 
 # Create beta (1.0.0 -> 1.0.1b1)
-autopypi version bump beta
+autmeopypi version bump beta
 
 # Create release candidate (1.0.0 -> 1.0.1rc1)
-autopypi version bump rc
+autmeopypi version bump rc
 ```
 
 ### Set Specific Version
 
 ```bash
-autopypi version set 2.0.0
+autmeopypi version set 2.0.0
 ```
 
 ---
@@ -1916,25 +1916,25 @@ autopypi version set 2.0.0
 
 ```bash
 # Create local tag
-autopypi tag
+autmeopypi tag
 
 # Create tag with message
-autopypi tag -m "Release 1.0.0"
+autmeopypi tag -m "Release 1.0.0"
 
 # Create and push tag
-autopypi tag --push
+autmeopypi tag --push
 ```
 
 ### Release with Tagging
 
 ```bash
-autopypi release --bump minor --tag --push-tag -t TOKEN
+autmeopypi release --bump minor --tag --push-tag -t TOKEN
 ```
 
 ### Changelog Generation
 
 ```python
-from autopypi import git
+from autmeopypi import git
 
 g = git(".")
 changelog = g.changelog()
@@ -2012,14 +2012,14 @@ Logs are stored in `.autopypi/logs/`:
 
 ## Color System
 
-AutoPyPI uses ANSI colors for terminal output.
+autmeopypi uses ANSI colors for terminal output.
 
 ### Enabling Colors
 
 Colors are automatically enabled. On Windows, call:
 
 ```python
-from autopypi import c
+from autmeopypi import c
 c.init()
 ```
 
@@ -2085,7 +2085,7 @@ c.init()
 ```bash
 pkg update && pkg upgrade
 pkg install python
-pip install autopypi
+pip install autmeopypi
 ```
 
 ---
@@ -2124,7 +2124,7 @@ autopypi/
 ### How do I upload to TestPyPI?
 
 ```bash
-autopypi upload --test -t YOUR_TEST_TOKEN
+autmeopypi upload --test -t YOUR_TEST_TOKEN
 ```
 
 ### Can I use username/password?
@@ -2132,25 +2132,25 @@ autopypi upload --test -t YOUR_TEST_TOKEN
 Yes, but tokens are recommended:
 
 ```bash
-autopypi upload -u username --password password
+autmeopypi upload -u username --password password
 ```
 
 ### How do I bump version and release?
 
 ```bash
-autopypi release --bump minor --tag -t TOKEN
+autmeopypi release --bump minor --tag -t TOKEN
 ```
 
 ### How do I publish multiple packages?
 
 ```bash
-autopypi start TOKEN --dir /path/to/packages
+autmeopypi start TOKEN --dir /path/to/packages
 ```
 
 or
 
 ```bash
-autopypi batch release /path/to/packages -t TOKEN
+autmeopypi batch release /path/to/packages -t TOKEN
 ```
 
 ### Does it work on Android?
@@ -2158,7 +2158,7 @@ autopypi batch release /path/to/packages -t TOKEN
 Yes! Install Termux and run:
 
 ```bash
-pip install autopypi
+pip install autmeopypi
 ```
 
 ---
@@ -2191,7 +2191,7 @@ Check your token:
 Either bump your version:
 
 ```bash
-autopypi version bump patch
+autmeopypi version bump patch
 ```
 
 Or use `--skip-existing` (with twine):
@@ -2206,7 +2206,7 @@ cfg.set("skip_existing", True)
 Run check to see details:
 
 ```bash
-autopypi check
+autmeopypi check
 ```
 
 Common issues:
@@ -2217,7 +2217,7 @@ Common issues:
 ### Colors not showing on Windows
 
 ```python
-from autopypi import c
+from autmeopypi import c
 c.init()  # Required on Windows
 ```
 
@@ -2233,30 +2233,30 @@ git add .
 git commit -m "feat: add new feature"
 
 # 2. Bump version
-autopypi version bump minor
+autmeopypi version bump minor
 
 # 3. Build and check
-autopypi build
-autopypi check
+autmeopypi build
+autmeopypi check
 
 # 4. Test on TestPyPI
-autopypi upload --test -t TEST_TOKEN
+autmeopypi upload --test -t TEST_TOKEN
 
 # 5. Verify on TestPyPI
 pip install --index-url https://test.pypi.org/simple/ yourpackage
 
 # 6. Release to PyPI
-autopypi upload -t PYPI_TOKEN
+autmeopypi upload -t PYPI_TOKEN
 
 # 7. Create and push tag
-autopypi tag --push
+autmeopypi tag --push
 ```
 
 ### Automated Release Script
 
 ```python
 #!/usr/bin/env python
-from autopypi import bld, upl, chk, ver, git
+from autmeopypi import bld, upl, chk, ver, git
 import sys
 
 def release(token, bump_type="patch"):
@@ -2305,7 +2305,7 @@ if __name__ == "__main__":
 ### Custom Build Script
 
 ```python
-from autopypi import bld, Logger
+from autmeopypi import bld, Logger
 
 log = Logger(verbose=True)
 log.logo()
@@ -2326,7 +2326,7 @@ else:
 ### Batch Processing Script
 
 ```python
-from autopypi import bat, Logger
+from autmeopypi import bat, Logger
 
 log = Logger()
 log.logo()
