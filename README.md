@@ -15,7 +15,7 @@
 ### Automated Python Package Publishing Tool
 
 [![Python](https://img.shields.io/badge/Python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![PyPI](https://img.shields.io/badge/PyPI-autopypi-FF6F00?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/autopypi/)
+[![PyPI](https://img.shields.io/badge/PyPI-autopypi-FF6F00?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/autmeopypi/)
 [![License](https://img.shields.io/badge/License-MIT-00C853?style=for-the-badge)](LICENSE)
 [![Termux](https://img.shields.io/badge/Termux-Supported-000000?style=for-the-badge&logo=android&logoColor=white)](https://termux.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-6x--u-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/6x-u)
