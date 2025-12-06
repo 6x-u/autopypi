@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/23973525/README.md)
+
 # AutoPyPI
 
 <div align="center">
